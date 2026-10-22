@@ -1,0 +1,4 @@
+# Lecture slides are the lecturer's material - keep them out of the repo
+*.pdf
+.DS_Store
+*.circ.bak
