@@ -1,7 +1,7 @@
 # Lesson 3.3 — Real Numbers: Conversions, Fixed-Point & Floating-Point (IEEE 754)
 
 > Based on lecture slides **3.3 Fixed-point numbers and floating-point numbers** (COMP20020).
-> ⬅️ [3.2 Multiplication & Division](09-multiplication-division.md) · [Index](../README.md)
+> ⬅️ [3.2 Multiplication & Division](09-multiplication-division.md) · [Index](../README.md) · ➡️ [4.1 Latches & Flip-Flops](11-latches-and-flip-flops.md)
 
 ## What are we learning?
 

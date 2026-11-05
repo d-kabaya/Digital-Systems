@@ -18,6 +18,10 @@ Simple, beginner-friendly lesson notes for **COMP20020 Digital Systems** (UCD), 
 | 8 | [3.1 Signed Integers](lessons/08-signed-integers.md) | full adder, ripple carry, two's complement, overflow, adder/subtractor | 10 Qs |
 | 9 | [3.2 Multiplication & Division](lessons/09-multiplication-division.md) | comparators, array multiplier, signed multiply, long division | 9 Qs |
 | 10 | [3.3 Fixed & Floating Point](lessons/10-fixed-and-floating-point.md) | fractional binary, conversions, Ua.b/Qa.b, IEEE 754 | 11 Qs |
+| 11 | [4.1 Latches & Flip-Flops](lessons/11-latches-and-flip-flops.md) | feedback, SR/gated SR/D latches, master–slave, D/SR/JK/T flip-flops | 10 Qs |
+| 12 | [4.2 Synchronous Circuits](lessons/12-synchronous-circuits.md) | registers, resets, RAM (SRAM/DRAM), frequency dividers, counters, shift registers | 9 Qs |
+| 13 | [4.3 Finite State Machines](lessons/13-finite-state-machines.md) | Moore vs Mealy, 8-step design process, sequence generator, hex code printer controller | 9 Qs |
+| 14 | [4.4 FSM Timing](lessons/14-fsm-timing.md) | setup/hold/clock-to-Q, metastability, critical path, max clock frequency, PVT, clock skew | 8 Qs |
 
 > Lectures 2.2 and 2.5 weren't in the uploaded slide set. The Sum-of-Products basics that 2.3 relies on are covered briefly in Lesson 4.
 
@@ -50,3 +54,9 @@ The [`circuits/`](circuits/) folder holds Logisim-evolution (v3.8/3.9) files tha
 | Signed overflow | same-sign inputs → opposite-sign result |
 | Multiply | n × n bits → 2n bits |
 | IEEE single | 1 sign / 8 exponent (bias 127) / 23 mantissa, implied 1. |
+| Latch vs flip-flop | latch = level-sensitive (while E = 1); flip-flop = edge-triggered (on the clock edge) |
+| JK flip-flop | 00 hold, 01 reset, 10 set, **11 toggle** |
+| FSM flip-flops | ⌈log₂(states)⌉; with D flip-flops, D = next state |
+| Moore vs Mealy | Moore: outputs from state only; Mealy: state + inputs |
+| Clock period | ≥ max(clk-to-Q + logic + setup), worst case; f_max = 1/T |
+| Hold check | min(clk-to-Q + logic) ≥ hold time, best case |
