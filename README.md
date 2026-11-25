@@ -22,12 +22,19 @@ Simple, beginner-friendly lesson notes for **COMP20020 Digital Systems** (UCD), 
 | 12 | [4.2 Synchronous Circuits](lessons/12-synchronous-circuits.md) | registers, resets, RAM (SRAM/DRAM), frequency dividers, counters, shift registers | 9 Qs |
 | 13 | [4.3 Finite State Machines](lessons/13-finite-state-machines.md) | Moore vs Mealy, 8-step design process, sequence generator, hex code printer controller | 9 Qs |
 | 14 | [4.4 FSM Timing](lessons/14-fsm-timing.md) | setup/hold/clock-to-Q, metastability, critical path, max clock frequency, PVT, clock skew | 8 Qs |
+| 15 | [5.1 Computer Organisation](lessons/15-computer-organisation-intro.md) | stored-program control, ISA vs organisation, Harvard vs von Neumann, fetch–decode–execute, the BEAG instruction set & encoding | 9 Qs |
+| 16 | [5.2 Programming the BEAG](lessons/16-beag-programming.md) | lli/lhi, arithmetic, lw/sw, memory map & I/O, branches, loops, if-then-else, the backwards printer | 10 Qs |
+| 17 | [5.3 BEAG Organisation in Detail](lessons/17-beag-organisation.md) | PC, program memory, decoder & control signals, register file, ALU, sign extension, data memory, von Neumann fetch/execute | 9 Qs |
 
 > Lectures 2.2 and 2.5 weren't in the uploaded slide set. The Sum-of-Products basics that 2.3 relies on are covered briefly in Lesson 4.
 
 ## 🔌 Logisim circuits
 
 The [`circuits/`](circuits/) folder holds Logisim-evolution (v3.8/3.9) files that go with the lessons. See [`circuits/README.md`](circuits/README.md) for what each one shows and how to try it.
+
+## 💻 BEAG programs
+
+[`programs/`](programs/) holds the lecture 5.2 example programs (assembly source and Logisim ROM images) and the course's BEAG assembler, `beagasm.py`. See [`programs/README.md`](programs/README.md).
 
 ## ✍️ Worked examples
 
@@ -60,3 +67,8 @@ The [`circuits/`](circuits/) folder holds Logisim-evolution (v3.8/3.9) files tha
 | Moore vs Mealy | Moore: outputs from state only; Mealy: state + inputs |
 | Clock period | ≥ max(clk-to-Q + logic + setup), worst case; f_max = 1/T |
 | Hold check | min(clk-to-Q + logic) ≥ hold time, best case |
+| BEAG instruction | 4 hex digits: opcode, field 1, field 2, field 3 (r3 = `3`) |
+| 16-bit constant | `lli` (low byte) **then** `lhi` (high byte) |
+| BEAG memory map | ROM 0x0000 · RAM 0x2000 · display 0x4000 · key ready 0x4001 · key code 0x4002 |
+| Branch | taken: PC = PC + offset (from the branch itself); `bz r0,0` = stop |
+| Sign extension | copy bit 7 into bits 15–8 |

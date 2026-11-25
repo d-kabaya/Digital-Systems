@@ -1,7 +1,7 @@
 # Lesson 4.4 — FSM Timing: Setup, Hold & Clock Speed
 
 > Based on lecture slides **4.4 FSM timing** (COMP20020).
-> ⬅️ [4.3 Finite State Machines](13-finite-state-machines.md) · [Index](../README.md)
+> ⬅️ [4.3 Finite State Machines](13-finite-state-machines.md) · [Index](../README.md) · ➡️ [5.1 Computer Organisation](15-computer-organisation-intro.md)
 
 ## What are we learning?
 

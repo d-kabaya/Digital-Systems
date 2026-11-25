@@ -1,0 +1,9 @@
+lli r1,0x00
+lhi r1,0x40
+lli r2,5
+lli r3,0x2A
+lli r4,1
+sw r3,(r1)
+sub r2,r2,r4
+bnz r2,-2
+bz r0,0
